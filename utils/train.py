@@ -10,7 +10,7 @@ class EarlyStop:
     self.patience = patience
     self.delta = delta
     self.counter = 0
-    self.best_loss = np.Inf
+    self.best_loss = np.inf
     self.stop = False
 
   def __call__(self, loss, model, path):

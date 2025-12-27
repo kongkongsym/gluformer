@@ -123,7 +123,7 @@ def train(trial_id, model_path, gpu_index, loss_name, num_samples, epochs, stop_
         criterion =  ExpLikeliLoss(num_samples=num_samples)
     else:
         criterion = nn.MSELoss()
-    model_optim = torch.optim.Adam(model.parameters(), lr=lrate, betas=(0, 0.9))
+    model_optim = torch.optim.Adam(model.parameters(), lr=lrate, betas=(0.0, 0.9))
 
     # define params for training
     TRAIN_STEPS = len(train_data_loader)
